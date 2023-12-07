@@ -4,12 +4,18 @@
     box-sizing: border-box;
 }
 
+:root {
+    --blue-color: #0d6efd;
+    --orange-color: #FF5733;
+    --green-color: #00FF00;;
+}
+
 body {
     background: #000;
+    color: #fff;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    height: 2000px;
 }
 
 ul {
@@ -27,24 +33,24 @@ i {
 }
 
 img {
-    max-width: 100%;
+   max-width: 100%;
 }
 
 /* Navbar */
 
 .navbar {
     background: #000;
-    padding: 20px;
 }
 
 .navbar .navbar-span {
-    color: aquamarine;
+    color: var(--orange-color);
 }
 
 .navbar .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 10vh;
 }
 
 .navbar .navbar-brand {
@@ -57,14 +63,90 @@ img {
 }
 
 .navbar ul li a {
-    padding: 0px 20px;
+    padding: 0px 40px;
     display: block;
     transition: 0.5s;
+}
+
+.navbar ul li a:last-child {
+    padding-right: 0px;
 }
 
 .navbar ul li a:hover {
     opacity: 0.5;
 }
+
+.navbar .navbar-span {
+    animation: changeColor 6s infinite;
+}
+
+/* About */
+
+.about .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90vh;
+    margin-top: 50px;
+}
+
+.about .about-h1 {
+    color: #00FF00;
+    margin: 25px 0;
+}
+
+.about .about-content {
+    line-height: 2;
+    width: 60%;
+}
+
+.about .about-span {
+    animation: changeColor 6s infinite;
+}
+
+.about .about-img {
+    width: 33%;
+}
+
+.about .about-img img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border: solid var(--orange-color) 6px;
+    border-radius: 20%;
+    box-shadow: 0 0 10px 6px #FF5733;
+}
+
+.about .about-buttons {
+    padding: 20px 0;
+}
+
+.about .about-buttons button {
+    font-size: 15px;
+    font-weight: bolder;
+    margin-right: 5px;
+    transition: 0.2 ease;
+}
+
+/* Proyects */
+
+.proyect .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.proyect h2 {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-end: 1;
+    grid-column-start: 3;
+}
+
+.card .card-img {
+    border: solid 1px #fff;
+}
+
 
 /* Utility Classes */
 
@@ -131,6 +213,12 @@ img {
     transition: 0.5s;
 }
 
+.mobile-menu ul li a i {
+    font-size: 25px;
+    padding-right: 10px;
+    line-height: 2;
+}
+
 
 /* Media Queries */
 
@@ -141,5 +229,25 @@ img {
 
     .navbar .hamburger-button {
         display: block;
+    }
+}
+
+/* Keyframes */
+
+@keyframes changeColor {
+    0% {
+        color: var(--green-color);
+    }
+    25% {
+        color: var(--orange-color);
+    }
+    50% {
+        color: var(--green-color);
+    }
+    75% {
+        color: var(--orange-color);
+    }
+    100% {
+        color: var(--green-color);
     }
 }
