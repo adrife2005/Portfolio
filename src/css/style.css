@@ -194,7 +194,7 @@ img {
 .skills .skills-img {
     margin-bottom: 100px;
     gap: 20px;
-    display: inline-flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -227,7 +227,6 @@ img {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     color: #333;
-    margin: 10px;
     width: 500px;
 }
 
@@ -251,6 +250,31 @@ img {
 
 .contact .contact-item input {
     outline: none;
+}
+
+/* Footer*/
+
+.footer .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+}
+
+.footer .footer-info h2 {
+    font-weight: 600;
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+.footer .footer-links li { 
+    padding: 2px 0;
+}
+
+.footer .footer-social a {
+    padding-right: 25px;
 }
 
 /* Utility Classes */
@@ -327,6 +351,56 @@ img {
 
 /* Media Queries */
 
+@media(max-width: 1100px) {
+   .about .about-h1 {
+    font-size: 2.5rem;
+    line-height: 1.4;
+    font-weight: 600;
+    margin: 40px 0 20px;
+   }
+}
+
+@media(max-width: 996px) {
+    .about .about-h1 {
+        font-size: 2.2rem;
+        line-height: 1.2;
+        font-weight: 600;
+        margin: 20px 0 20px;
+    }
+    .about .about-p {
+        font-size: 1.1rem;
+        line-height: 1.5;
+        font-weight: normal;
+        margin: 20px 0 10px;
+    }
+    .skills .skills-img {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media(max-width: 800px) { 
+    .about .about-h1 {
+        font-size: 1.6rem;
+        line-height: 1.2;
+        font-weight: 600;
+        margin: 20px 0 20px;
+    }
+    .about .about-p {
+        font-size: 1.1rem;
+        line-height: 1.5;
+        font-weight: normal;
+        margin: 20px 0 10px;
+    }
+    .about .about-buttons button {
+        font-size: 12px;
+        margin-top: 0px;
+    }
+    .contact .contact-item-2 {
+        width: 350px;
+    }
+}
+
 @media (max-width: 670px) {
     .navbar .main-menu {
         display: none;
@@ -334,6 +408,52 @@ img {
 
     .navbar .hamburger-button {
         display: block;
+    }
+
+    .about .container {
+        flex-direction: column;
+    }
+    .about .about-content  {
+        margin: 25px 0;
+        width: 100%;
+    }
+    .about .about-h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+        font-weight: 600;
+        margin: 20px 0 20px;
+    }
+    .about .about-p {
+        font-size: 1.1rem;
+        line-height: 1.5;
+        font-weight: normal;
+        margin: 20px 0 10px;
+    }
+
+    .about .about-img {
+        width: 100%;
+    }
+
+    .proyect .container {
+        margin-top: 200px;
+        display: block;
+    }
+
+    .proyect .card {
+        margin: 50px 0;
+    }
+
+    .skills .skills-img {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .contact .contact-flex {
+        display: block;
+    }
+
+    .contact .contact-item-2 {
+        margin-top: 75px;
+        width: 100%;
     }
 }
 
@@ -356,3 +476,6 @@ img {
         color: var(--green-color);
     }
 }
+
+
+
