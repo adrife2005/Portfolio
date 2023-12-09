@@ -7,7 +7,8 @@
 :root {
     --blue-color: #0d6efd;
     --orange-color: #FF5733;
-    --green-color: #00FF00;;
+    --green-color: #00FF00;
+    --other-color: #00CED1;
 }
 
 body {
@@ -144,9 +145,113 @@ img {
 }
 
 .card .card-img {
-    border: solid 1px #fff;
+    border-bottom: solid 1px #fff;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
 }
 
+.card .card-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card .card-title h3 {
+    color: #00CED1
+}
+
+.card .card-title .card-title-i a {
+    padding-left: 5px;
+    font-size: 27px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.card .card-title .card-title-i a:hover {
+    color: #FF0000  ;
+}
+
+.card .card-text {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.card .card-skills img {
+    width: 30px;
+    color: #fff;
+}
+
+/* Skills */
+
+.skills .container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.skills .skills-img {
+    margin-bottom: 100px;
+    gap: 20px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skills .skills-item-img img {
+    width: 75%;
+}
+
+.skills .container h2 {
+    font-weight: 600;
+}
+
+/* Contact */
+
+.contact .contact-flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 100px 0;
+}
+
+.contact .contact-item-1 ul li i {
+    font-size: 25px;
+    padding-right: 10px;
+}
+
+.contact .contact-item-2 {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    color: #333;
+    margin: 10px;
+    width: 500px;
+}
+
+.contact .contact-item-form input[type = 'text'], [type= 'email']{
+    border: 0;
+    border-bottom: 1px solid #b4becb;
+    width: 100%;
+    padding-bottom: 5px;
+    font-size: 16px;
+    padding: 3px;
+}
+
+.contact .contact-item-form input[type = 'submit'] {
+    background: #047aed;;
+    color: #fff;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact .contact-item input {
+    outline: none;
+}
 
 /* Utility Classes */
 
