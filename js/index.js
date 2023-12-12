@@ -6,3 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     hamburgerMenu.addEventListener('click', () => mobileMenu.classList.toggle('active'));
 })
+
+document.addEventListener('DOMContentLoaded', () => {
+
+})
