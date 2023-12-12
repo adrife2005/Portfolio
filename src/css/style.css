@@ -277,6 +277,14 @@ img {
     padding-right: 25px;
 }
 
+.footer .footer-links {
+    text-align: center ;
+}
+
+.footer .footer-social {
+    text-align: end;
+}
+
 /* Utility Classes */
 
 .container {
