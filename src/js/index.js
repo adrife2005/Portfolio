@@ -7,6 +7,16 @@ document.addEventListener('DOMContentLoaded', () => {
     hamburgerMenu.addEventListener('click', () => mobileMenu.classList.toggle('active'));
 })
 
-document.addEventListener('DOMContentLoaded', () => {
+// Navbar
 
+document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('scroll', () => {
+        const navbar = document.querySelector('nav');
+        if (window.scrollY > 0) {
+            navbar.classList.remove('p-3');
+            navbar.classList.add('px-3')
+        } else {
+            navbar.classList.add('p-3');
+        }
+    })
 })
