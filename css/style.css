@@ -248,13 +248,21 @@ img {
     cursor: pointer;
 }
 
+.contact .contact-item-form input[type = 'submit']:hover {
+    opacity: 0.9;
+}
+
 .contact .contact-item input {
     outline: none;
 }
 
+.contact .contact-item input:focus {
+    font-weight: 600;
+}
+
 /* Footer*/
 
-.footer .container {
+.footer .container-sm {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
@@ -462,6 +470,12 @@ img {
     .contact .contact-item-2 {
         margin-top: 75px;
         width: 100%;
+    }
+
+    .footer .footer-info h2 {
+        font-weight: 600;
+        font-size: 20px;
+        padding-bottom: 10px;
     }
 }
 
