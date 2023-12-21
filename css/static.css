@@ -8,6 +8,7 @@
 
 .nav-col {
     background: var(--black-color);
+    opacity: 0.9;
 }
 
 
@@ -143,5 +144,8 @@ input:focus {
     background-color: var(--black-color);
     color: #fff;
     padding: 20px;
-    transition: 0.5s ease-in-out;
+}
+
+.flex {
+    display: flex;
 }
