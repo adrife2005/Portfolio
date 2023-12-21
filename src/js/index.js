@@ -17,7 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (window.scrollY > 0) {
       navbar.classList.remove("p-3");
       navbar.classList.add("px-3");
+      navbar.classList.add("nav-col");
     } else {
+      navbar.classList.remove("nav-col");
       navbar.classList.add("p-3");
     }
   });
