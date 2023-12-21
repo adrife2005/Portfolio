@@ -2,7 +2,14 @@
     --blue-color: #0d6efd;
     --orange-color: #FF5733;
     --green-color: #00FF00;;
+    --black-color: #19191a;
+    --other-color: #00CED1;
 }
+
+.nav-col {
+    background: var(--black-color);
+}
+
 
 .fixed-top {
     position: fixed;
@@ -15,6 +22,7 @@
 
 .px-3 {
     padding: 0 20px;
+    transition: 0.5s ease-out;
 }
 
 .p-3 {
@@ -100,6 +108,10 @@
     padding: 15px 0;
 }
 
+.bottom {
+    border-bottom: solid 1px #fff;
+}
+
 .card {
     width: 100%;
     height: 100%;
@@ -125,4 +137,11 @@ input:focus {
 
 .bolder {
     font-weight: 600;
+}
+
+.card-new {
+    background-color: var(--black-color);
+    color: #fff;
+    padding: 20px;
+    transition: 0.5s ease-in-out;
 }
