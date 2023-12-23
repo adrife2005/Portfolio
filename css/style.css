@@ -417,7 +417,6 @@ img {
   }
   .about .about-buttons button {
     font-size: 12px;
-    margin-top: 0px;
     padding: 13px 30px;
     font-size: 15px;
   }
@@ -495,6 +494,12 @@ img {
 @media (max-width: 500px) {
   .about .about-h1 {
     font-size: 1.7rem;
+  }
+
+  .about .about-buttons button {
+    font-size: 12px;
+    padding: 12px 20px;
+    font-size: 15px;
   }
 
   .skills .skills-img {
