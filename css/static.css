@@ -6,8 +6,16 @@
   --other-color: #00ced1;
 }
 
+.overflow {
+  overflow: hidden;
+}
+
 .nav-col {
   background: var(--black-color);
+}
+
+input {
+  caret-color: var(--other-color);
 }
 
 .fixed-top {
@@ -119,10 +127,6 @@
   box-shadow: 0 0 10px 6px #0d6efd;
   border-radius: 10px;
   padding: 10px;
-}
-
-input:focus {
-  text-decoration: none;
 }
 
 .mb-2 {
