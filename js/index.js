@@ -4,16 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const hamburgerMenu = document.querySelector(".hamburger-button");
   const mobileMenu = document.querySelector(".mobile-menu");
   const body = document.querySelector("body");
+  const widthScreen = window.matchMedia("(min-width: 500px)");
 
+  console.log(widthScreen);
   hamburgerMenu.addEventListener("click", () => {
     mobileMenu.classList.toggle("active");
     body.classList.toggle("overflow");
-  });
-
-  document.body.addEventListener("", () => {
-    if (window.screenX > 500) {
-      mobileMenu.classList.remove("active");
-    }
   });
 });
 
