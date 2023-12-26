@@ -378,6 +378,7 @@ img {
   text-align: center;
   justify-content: center;
   padding: 15px 0;
+  margin: 25px 0 0 0;
 }
 
 .mobile-menu ul:last-child li {
@@ -504,6 +505,9 @@ img {
 }
 
 @media (max-width: 500px) {
+  .navbar {
+  }
+
   .about .about-h1 {
     font-size: 1.7rem;
   }
