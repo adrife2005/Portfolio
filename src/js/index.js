@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const body = document.querySelector("body");
   const widthScreen = window.matchMedia("(min-width: 500px)");
 
-  console.log(widthScreen);
   hamburgerMenu.addEventListener("click", () => {
     mobileMenu.classList.toggle("active");
     body.classList.toggle("overflow");
@@ -16,12 +15,14 @@ document.addEventListener("DOMContentLoaded", () => {
 // Navbar
 
 document.addEventListener("DOMContentLoaded", () => {
+  const navbar = document.querySelector("nav");
+  const container = document.querySelector(".container");
   document.addEventListener("scroll", () => {
-    const navbar = document.querySelector("nav");
     if (window.scrollY > 0) {
       navbar.classList.remove("p-3");
       navbar.classList.add("px-3");
       navbar.classList.add("nav-col");
+      container.classList.add("vh0");
     } else {
       navbar.classList.remove("nav-col");
       navbar.classList.add("p-3");

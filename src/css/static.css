@@ -32,6 +32,10 @@ input {
   transition: 0.5s ease-out;
 }
 
+.vh0 {
+  height: 0vh;
+}
+
 .p-3 {
   padding-top: 10px;
   padding-bottom: 10px;
