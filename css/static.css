@@ -28,7 +28,7 @@ input {
 }
 
 .px-3 {
-  padding: 0 20px;
+  padding: 0 10px;
   transition: 0.5s ease-out;
 }
 
@@ -39,8 +39,8 @@ input {
 .p-3 {
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .mt-5 {
