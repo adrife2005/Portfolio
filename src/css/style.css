@@ -353,7 +353,7 @@ img {
 }
 
 .mobile-menu ul:first-child {
-  margin-top: 150px;
+  margin-top: 175px;
   text-align: center;
   justify-content: center;
 }
@@ -441,6 +441,13 @@ img {
 @media (max-width: 670px) {
   .navbar .main-menu {
     display: none;
+  }
+
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 9vh;
   }
 
   .navbar .hamburger-button {
