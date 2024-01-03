@@ -6,6 +6,14 @@
   --other-color: #00ced1;
 }
 
+.display-show {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+
 .overflow {
   overflow: hidden;
 }
@@ -95,7 +103,6 @@ input {
   background: #fff;
   color: #000;
   font-weight: 600;
-  cursor: pointer;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   transition: 0.5s ease;
 }
