@@ -48,7 +48,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10vh;
+  height: 8vh;
 }
 
 .navbar .navbar-brand {
@@ -328,6 +328,14 @@ img {
   z-index: 1000;
 }
 
+.hamburger-x {
+  width: 20px;
+  height: 3px;
+  margin: 6px 0;
+  padding: 10px;
+  z-index: 1000;
+}
+
 .hamburger-button .hamburger-line {
   width: 30px;
   height: 3px;
@@ -340,9 +348,9 @@ img {
 .mobile-menu {
   position: fixed;
   top: 0;
-  right: -1000px;
-  width: 100%;
+  right: -800px;
   height: 100%;
+  width: 100%;
   background-color: var(--black-color);
   box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.2);
   transition: 0.3s ease-in-out;
@@ -352,18 +360,22 @@ img {
   right: 0;
 }
 
-.mobile-menu ul:first-child {
-  margin-top: 175px;
-  text-align: center;
+.navbar .mobile-menu ul:first-child {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 75%;
+  align-items: center;
   justify-content: center;
+  margin-top: 75px;
 }
 
 .mobile-menu ul li {
-  margin: 10px 0;
+  margin: 10px 10px;
 }
 
 .mobile-menu ul li a {
-  font-size: 30px;
+  font-size: 35px;
   transition: 0.5s;
 }
 
@@ -377,12 +389,13 @@ img {
   display: flex;
   text-align: center;
   justify-content: center;
-  padding: 15px 0;
-  margin: 25px 0 0 0;
+  margin-bottom: 30px;
+  width: 100%;
 }
 
 .mobile-menu ul:last-child li {
   margin: 0 5px;
+  padding: 3px;
 }
 
 /* Media Queries */
@@ -447,7 +460,8 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 9vh;
+    margin: 5px;
+    height: 7vh;
   }
 
   .navbar .hamburger-button {
@@ -455,7 +469,9 @@ img {
   }
 
   .about .container {
+    margin-top: 75px;
     flex-direction: column;
+    height: 80vh;
   }
   .about .about-content {
     margin: 25px 0;
@@ -512,9 +528,6 @@ img {
 }
 
 @media (max-width: 500px) {
-  .navbar {
-  }
-
   .about .about-h1 {
     font-size: 1.7rem;
   }
