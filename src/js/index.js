@@ -4,11 +4,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const hamburgerMenu = document.querySelector(".hamburger-button");
   const mobileMenu = document.querySelector(".mobile-menu");
   const body = document.querySelector("body");
-  const widthScreen = window.matchMedia("(min-width: 500px)");
+  const button = document.querySelector("button");
+  const icon = button.firstElementChild;
+  console.log(icon);
 
-  hamburgerMenu.addEventListener("click", () => {
+  hamburgerMenu.addEventListener("click", (e) => {
     mobileMenu.classList.toggle("active");
     body.classList.toggle("overflow");
+    icon.classList.toggle("bi-toggle-on");
   });
 });
 
