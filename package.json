@@ -1,10 +1,10 @@
 {
-  "name": "oak",
+  "name": "portfolio",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "deploy": "gh-pages -d src"
+    "deploy": "gh-pages -d frontend"
   },
   "keywords": [],
   "author": "",
