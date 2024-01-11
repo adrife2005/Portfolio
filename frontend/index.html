@@ -13,7 +13,7 @@
     <title>~ Portfolio ~</title>
 </head>
 <body>
-    <nav class="navbar fixed-top p-3">
+    <nav id="navbar" class="navbar fixed-top p-3">
         <div class="container">
             <div class="navbar-brand">
                 <a href="#">ADRIFE<span class="navbar-span">.DIV</span></a>
@@ -216,7 +216,7 @@
                 </div>
                 <div class="contact-item contact-item-2">
                     <h2>Let's work together</h2>
-                    <form method="post" action="/api">
+                    <form method="post" action="/login" id="form">
                         <div class="contact-item-form mb-2">
                             <input type="text" id="name" name="name" placeholder="Name" required>
                         </div>
@@ -229,6 +229,8 @@
                         <div class="contact-item-form">
                             <input type="submit" id="submit" value="Send">
                         </div>
+
+
                     </form>
                 </div>
             </div>
