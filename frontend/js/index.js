@@ -32,12 +32,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-
-// PreventDefault of the submit
-document.addEventListener("DOMContentLoaded", () => {
-  const submit = document.querySelector("#submit");
-
-  submit.addEventListener("submit", (e) => {
-    e.preventDefault();
-  });
-});

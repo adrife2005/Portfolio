@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Contact Email</title>
+</head>
+<body>
+    <style>
+        body {
+            background-color: black;
+            overflow-x: hidden;
+            width: 100%;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin: 25px auto;
+            width: 500px;
+            height: 675px;
+            background-color: white;
+            border-radius: 2%;
+            padding: 30px;
+        }
+
+        h2 {
+            margin: 20px;
+        }
+
+        form {
+            display: block;
+            text-align: center;
+        }
+
+        .mb-2 {
+                margin: 35px 0;
+        }
+
+        input#name, input#email, input#proyect, input#subject {
+            display: block;
+            width: 90%;
+            margin: auto;
+            height: 40px;
+            font-size: 17px;
+            padding-left: 10px;
+        }
+
+        textarea {
+            display: block;
+             margin: auto;
+             font-size: 17px;
+             padding-left: 10px;
+             width: 91%;
+        }
+
+        ::placeholder {
+            color: grey;
+            font-size: 16px;
+        }
+
+        .contact-item-form {
+        }
+
+         .a {
+            padding: 12px 32px;
+            border-radius: 6px;
+            color: #333;
+            font-size: 16px;
+            background: #0ef;
+            box-shadow: 0 0 10px #0ef;
+            text-align: center;
+            margin-top: 10px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            font-weight: 600;
+         }
+
+         .mt-1 {
+            margin-top: 75px;
+         }
+
+                  input#submit:hover {
+                    opacity: 0.9;
+                  }
+
+                  @media (max-width: 600px) {
+                    .container {
+                        width: 300px;
+              margin: 50px auto;
+
+                    }
+                  }
+
+
+
+                   a{
+                    text-decoration: none;
+                    color: black;
+                   }
+
+    </style>
+    {{{body}}}
+
+    <script src=" https://smtpjs.com/v3/smtp.js"></script>
+    <script src="js/formEmail.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

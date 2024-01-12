@@ -4,14 +4,27 @@ const path = require("path");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv").config();
 const exphb = require("express-handlebars");
+const connectDB = require("./config/db");
 const { errorHandler } = require("./middleware/errorMidleware");
 const PORT = process.env.PORT || 5000;
 
 const app = express();
 
+// Init database
+connectDB();
+
 // middleware body
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+// Express-handlebars
+
+app.engine("handlebars", exphb.engine({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
+app.get("/contact", (req, res) => {
+  res.render("home");
+});
 
 // login route API
 app.use("/login", require("./routes/login"));

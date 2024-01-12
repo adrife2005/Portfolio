@@ -63,8 +63,8 @@
                     portfolio to improve my skills and show myself that I can do anything
                     I set my mind to.</p>
                 <div class="about-buttons">
-                    <button class="btn btn-primary">Let's work together</button>
-                    <button class="btn btn-seconday">Contact Me</button>
+                    <a href="#form"><button class="btn btn-primary">Let's work together</button></a>
+                    <a href="/contact"><button class="btn btn-seconday">Contact Me</button></a>
                 </div>
             </div>
             <div class="about-img">
@@ -218,19 +218,17 @@
                     <h2>Let's work together</h2>
                     <form method="post" action="/login" id="form">
                         <div class="contact-item-form mb-2">
-                            <input type="text" id="name" name="name" placeholder="Name" required>
+                            <input type="text" id="name" name="name" placeholder="Name" autocomplete="off" required>
                         </div>
                         <div class="contact-item-form mb-2">
-                            <input type="email" id="email" name="email" placeholder="Email" required>
+                            <input type="email" id="email" name="email" placeholder="Email" autocomplete="off" required>
                         </div>
                         <div class="contact-item-form mb-2">
-                            <input type="text" id="proyect" name="proyect" placeholder="Company Name" required>
+                            <input type="text" id="proyect" name="proyect" placeholder="Company Name" autocomplete="off" required>
                         </div>
                         <div class="contact-item-form">
                             <input type="submit" id="submit" value="Send">
                         </div>
-
-
                     </form>
                 </div>
             </div>
@@ -260,5 +258,6 @@
     </footer>
 
     <script src="js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

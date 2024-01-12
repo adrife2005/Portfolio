@@ -1,32 +1,31 @@
 const moongose = require("mongoose");
 const asyncHandler = require("express-async-handler");
-const uuid = require("uuid");
+const User = require("../models/userModel");
 
 // @desc Get data
 // @rute GET /login
 // @status private
 const getData = asyncHandler(async (req, res) => {
-  await res.status(200).json(members);
+  const getUsers = await User.find();
+
+  await res.status(200).json(getUsers);
 });
 
 // @desc Set data
 // @rute POST /login
 // @status private
 const setData = asyncHandler(async (req, res) => {
-  const createUser = {
-    id: uuid.v4(),
+  if (!req.body.name || !req.body.email || !req.body.proyect) {
+    res.status(400);
+    throw new Error("Pleas fill out all the fields");
+  }
+
+  const setUser = await User.create({
     name: req.body.name,
     email: req.body.email,
     proyect: req.body.proyect,
-    status: "active",
-  };
+  });
 
-  if (!createUser.name || !createUser.email || !createUser.proyect) {
-    res.status(400);
-    throw new Error("Pleas fill out al the fields");
-  }
-
-  members.push(createUser);
   res.redirect("/#form");
 });
 
@@ -34,31 +33,37 @@ const setData = asyncHandler(async (req, res) => {
 // @rute PUT /login:id
 // @status private
 const updateData = asyncHandler(async (req, res) => {
-  const found = members.some((member) => member.id === parseInt(req.params.id));
+  const find = await User.findById(req.params.id);
 
-  if (found) {
-    const updateMember = req.body;
-    members.forEach((member) => {
-      if (member.id === parseInt(req.params.id)) {
-        member.name = updateMember.name ? updateMember.name : member.name;
-        member.email = updateMember.email ? updateMember.email : member.email;
-        member.proyect = updateMember.proyect
-          ? updateMember.proyect
-          : member.proyect;
-      }
-
-      res.json({ msg: "Updated sucessfully" });
-    });
-  } else {
-    res.json({ msg: "No member of the ID of" + req.params.id });
+  if (!find) {
+    res.status(400);
+    throw new Error("User ID not found");
   }
+
+  const updatedUser = await User.findByIdAndUpdate(req.params.id, req.body, {
+    new: true,
+  });
+
+  res.status(200).json(updatedUser);
 });
 
 // @desc Delete data
 // @rute DELETE /login/:id
 // @status private
 const deleteData = asyncHandler(async (req, res) => {
-  res.send({ msg: `deleteData of the ID ${req.params.id}` });
+  const find = await User.findById(req.params.id);
+  const findData = await User.find(req.body);
+
+  if (!find) {
+    res.status(400);
+    throw new Error("User ID not found");
+  }
+
+  await find.deleteOne();
+
+  res.send({
+    msg: `User of the id: ${req.params.id}, deleted succesfully`,
+  });
 });
 
 module.exports = {
